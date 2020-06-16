@@ -176,8 +176,9 @@ else:
 load_proxies()
 num = 0
 screen()
-if "extreme" == "extreme":
-    if threading.active_count() < int(threads):
-        if num < len(emails):
-            threading.Thread(target=check, args=(emails[num], passwords[num], proxyline,)).start()
-            num+=1
+while 1:
+    if "extreme" == "extreme":
+        if threading.active_count() < int(threads):
+            if num < len(emails):
+                threading.Thread(target=check, args=(emails[num], passwords[num], proxyline,)).start()
+                num+=1
